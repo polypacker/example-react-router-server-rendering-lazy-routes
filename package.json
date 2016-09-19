@@ -22,9 +22,8 @@
     "react-router": "^1.0.0"
   },
   "scripts": {
-    "start": "polypacker --run NODE --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset FULLSTACK_APPLICATION , --babelPresets react",
-    "watch": "polypacker --watch --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset FULLSTACK_APPLICATION , --babelPresets react",
-    "dist": "polypacker --chunkFilename '[id].chunk.js' --environments PRODUCTION , --preset FULLSTACK_APPLICATION , --babelPresets react"
+    "watch": "polypacker --watch --entry ./src/index.js --out ./dist/index.js --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset DJANGO_REACT",
+    "dist": "polypacker --entry ./src/index.js --out ./dist/index.js --chunkFilename '[id].chunk.js' --environments PRODUCTION , --preset DJANGO_REACT"
   },
   "babel": {
     "presets": [
