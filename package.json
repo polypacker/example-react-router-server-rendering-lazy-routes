@@ -1,31 +1,36 @@
 {
-    "name": "react-router-lazy-route-server-rendering",
-    "version": "1.0.0",
-    "description": "",
-    "main": "client.js",
-    "dependencies": {
-        "history": "^1.13.1",
-        "polypacker": "^0.2.0",
-        "react": "^0.14.2",
-        "react-dom": "^0.14.2",
-        "react-router": "^1.0.0",
-        "babel-preset-es2015": "^6.14.0",
-        "babel-preset-react": "^6.11.1",
-        "babel-preset-stage-0": "^6.5.0"
-    },
-    "scripts": {
-        "start": "NODE_ENV=production webpack --progress && babel-node modules/server.js",
-        "build": "polypacker --entry ./modules/client.js --out __build__/main.js  --chunkFilename '[id].chunk.js' --environments PRODUCTION , --contexts NODE , --babelPresets react",
-        "serve": "babel-node modules/server.js"
-    },
-    "author": "Ryan Florence",
-    "license": "ISC",
-    "babel": {
-        "presets": [
-            "es2015",
-            "react",
-            "stage-0"
-        ]
-    }
+  "name": "react-splitting-polypacker-example",
+  "version": "0.1.0",
+  "description": "example react project that splits code on route boundries and loads them lazily",
+  "author": "Michael Joseph Rosenthal <rosenthalm93@gmail.com>",
+  "license": "MIT",
 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polypacker/example-polypacker-react-split-routes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/polypacker/example-polypacker-react-split-routes/issues"
+  },
+
+  "main": "dist/node_production.js",
+  "dependencies": {
+    "history": "^1.13.1",
+    "polypacker": "^0.2.0-alpha.3",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "react-router": "^1.0.0"
+  },
+  "scripts": {
+    "start": "polypacker --run NODE --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset FULLSTACK_APPLICATION , --babelPresets react",
+    "watch": "polypacker --watch --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset FULLSTACK_APPLICATION , --babelPresets react",
+    "dist": "polypacker --chunkFilename '[id].chunk.js' --environments PRODUCTION , --preset FULLSTACK_APPLICATION , --babelPresets react"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  }
 }
