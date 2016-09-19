@@ -8,10 +8,11 @@ partial app loading with lazy routes and webpack's code splitting, using [polypa
 
 ## Running
 
-```
+``` bash
 npm install
 npm run watch
-open http://localhost:8000
+open http://localhost:3000/dist/[id].index.js # to observe files
+# follow normal usage instructions from [django-webpack-loader](https://github.com/owais/django-webpack-loader/)
 ```
 
 ## How it works
@@ -25,4 +26,4 @@ open http://localhost:8000
 5. We render on the client.
 6. We raise our arms in the air in triumph.
   
-This example uses `polypacker --preset FULLSTACK_APPLICATION` to break the application into `node` and `browser` distributions under `dist`, based on `CONTEXT`, which is why the core logic from `./src/client.js` and `./src/server.js` are wrapped in exports and run from `./src/index.js` based on context. _Theoretically_, this approach should work with any valid `polypacker` configuration
+This example uses `polypacker --preset DJANGO_REACT` for standalone browser apps, and outputs a `webpack-stats.json` for use with [django-webpack-loader](https://github.com/owais/django-webpack-loader/).
