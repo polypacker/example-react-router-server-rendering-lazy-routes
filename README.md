@@ -1,6 +1,8 @@
 React Router and Polypacker Example: Server Rendering Lazy Routes
 ==================================================
 
+This branch demonstrates using a [polypack](https://github.com/polypacker/example-react-router-polypack) inside a fullstack application
+
 Forked from [Ryan Florence's example](https://github.com/ryanflorence/example-react-router-server-rendering-lazy-routes)
 
 This minimal demo shows how to get the benefits of server rendering and

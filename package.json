@@ -4,7 +4,6 @@
   "description": "example react project that splits code on route boundries and loads them lazily",
   "author": "Michael Joseph Rosenthal <rosenthalm93@gmail.com>",
   "license": "MIT",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/polypacker/example-polypacker-react-split-routes.git"
@@ -12,14 +11,13 @@
   "bugs": {
     "url": "https://github.com/polypacker/example-polypacker-react-split-routes/issues"
   },
-
   "main": "dist/node_production.js",
   "dependencies": {
-    "history": "^1.13.1",
-    "polypacker": "^0.2.0-alpha.7",
+    "example-react-router-polypack": "^0.1.0",
+    "polypacker": "^0.2.0-beta.2",
     "react": "^0.14.2",
-    "react-dom": "^0.14.2",
-    "react-router": "^1.0.0"
+    "react-router": "^1.0.0",
+    "history": "^1.13.1"
   },
   "scripts": {
     "start": "polypacker --run NODE",
@@ -30,7 +28,9 @@
     "arguments": {
       "chunkFilename": "[id].chunk.js",
       "preset": "FULLSTACK_APPLICATION",
-      "babelPresets": ["react"]
+      "babelPresets": [
+        "react"
+      ]
     }
   }
 }
