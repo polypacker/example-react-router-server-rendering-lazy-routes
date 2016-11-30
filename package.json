@@ -16,21 +16,21 @@
   "main": "dist/node_production.js",
   "dependencies": {
     "history": "^1.13.1",
-    "polypacker": "^0.2.0-alpha.3",
+    "polypacker": "^0.2.0-alpha.7",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0"
   },
   "scripts": {
-    "start": "polypacker --run NODE --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset FULLSTACK_APPLICATION , --babelPresets react",
-    "watch": "polypacker --watch --chunkFilename '[id].chunk.js' --environments DEVELOPMENT , --preset FULLSTACK_APPLICATION , --babelPresets react",
-    "dist": "polypacker --chunkFilename '[id].chunk.js' --environments PRODUCTION , --preset FULLSTACK_APPLICATION , --babelPresets react"
+    "start": "polypacker --run NODE",
+    "watch": "polypacker --watch",
+    "dist": "polypacker --environments [ PRODUCTION ]"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react",
-      "stage-0"
-    ]
+  "polypacker": {
+    "arguments": {
+      "chunkFilename": "[id].chunk.js",
+      "preset": "FULLSTACK_APPLICATION",
+      "babelPresets": ["react"]
+    }
   }
 }
